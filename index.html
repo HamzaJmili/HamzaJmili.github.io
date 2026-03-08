@@ -22,9 +22,9 @@
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
     body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
-    body::after { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+    body::after { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(124,154,191,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(124,154,191,0.03) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(10,12,16,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: -0.02em; }
     .nav-logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
@@ -42,7 +42,7 @@
 
     #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
     .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
-    .hero-tag { display: inline-block; padding: 0.3rem 0.9rem; background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2); border-radius: 100px; font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; font-family: 'Syne', sans-serif; }
+    .hero-tag { display: inline-block; padding: 0.3rem 0.9rem; background: rgba(124,154,191,0.08); border: 1px solid rgba(124,154,191,0.2); border-radius: 100px; font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; font-family: 'Syne', sans-serif; }
     .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
     .hero-title .line2 { color: var(--accent); }
     .hero-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 480px; margin-bottom: 2.5rem; line-height: 1.8; }
@@ -69,39 +69,37 @@
 
     .filter-bar { display: flex; gap: 0.8rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .filter-btn { padding: 0.45rem 1.1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; font-size: 0.82rem; font-weight: 600; font-family: 'Syne', sans-serif; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
-    .filter-btn:hover, .filter-btn.active { background: rgba(0,229,255,0.1); border-color: var(--accent); color: var(--accent); }
+    .filter-btn:hover, .filter-btn.active { background: rgba(124,154,191,0.1); border-color: var(--accent); color: var(--accent); }
 
     #projects { padding: 6rem 0; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
     .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem; }
-    .project-card:hover { border-color: rgba(124,77,255,0.3); transform: translateY(-4px); box-shadow: 0 0 40px rgba(124,77,255,0.1); }
+    .project-card:hover { border-color: rgba(124,154,191,0.3); transform: translateY(-4px); box-shadow: 0 0 40px rgba(124,154,191,0.1); }
     .project-card.hidden { display: none; }
     .project-header { display: flex; align-items: center; gap: 1rem; }
     .project-emoji { font-size: 2.2rem; }
     .project-meta { display: flex; flex-direction: column; gap: 0.3rem; }
     .project-type { font-size: 0.72rem; font-weight: 700; font-family: 'Syne', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 4px; display: inline-block; }
-    .type-engineer { background: rgba(0,229,255,0.1); color: var(--accent); }
-    .type-scientist { background: rgba(124,77,255,0.1); color: var(--accent2); }
-    .type-analyst { background: rgba(255,107,107,0.1); color: var(--accent3); }
+    .type-engineer { background: rgba(124,154,191,0.1); color: var(--accent); }
+    .type-scientist { background: rgba(160,180,204,0.1); color: var(--accent2); }
+    .type-analyst { background: rgba(197,213,229,0.1); color: var(--accent3); }
     .project-year { font-size: 0.75rem; color: var(--text-muted); }
     .project-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
     .project-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
     .project-bullets li { font-size: 0.85rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.65; }
     .project-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.22em; }
     .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .project-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none; font-family: 'Syne', sans-serif; transition: gap 0.2s; }
-    .project-link:hover { gap: 0.7rem; }
 
     #skills { padding: 6rem 0; }
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
     .skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; position: relative; overflow: hidden; }
     .skill-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); opacity: 0; transition: opacity 0.3s; }
-    .skill-card:hover { border-color: rgba(0,229,255,0.2); transform: translateY(-4px); box-shadow: var(--glow); }
+    .skill-card:hover { border-color: rgba(124,154,191,0.2); transform: translateY(-4px); box-shadow: var(--glow); }
     .skill-card:hover::before { opacity: 1; }
     .skill-icon { font-size: 2rem; margin-bottom: 1rem; }
     .skill-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .tag { padding: 0.25rem 0.65rem; background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.12); border-radius: 6px; font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+    .tag { padding: 0.25rem 0.65rem; background: rgba(124,154,191,0.06); border: 1px solid rgba(124,154,191,0.12); border-radius: 6px; font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
 
     #experience { padding: 6rem 0; }
     .timeline { display: flex; flex-direction: column; gap: 1.5rem; position: relative; }
@@ -109,10 +107,10 @@
     .timeline-item { display: flex; gap: 2rem; padding-left: 3rem; position: relative; }
     .timeline-dot { position: absolute; left: 13px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); box-shadow: 0 0 12px var(--accent); }
     .timeline-content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem 2rem; flex: 1; transition: border-color 0.3s; }
-    .timeline-content:hover { border-color: rgba(0,229,255,0.2); }
+    .timeline-content:hover { border-color: rgba(124,154,191,0.2); }
     .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem; }
     .timeline-role { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; }
-    .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(0,229,255,0.08); padding: 0.2rem 0.7rem; border-radius: 6px; }
+    .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(124,154,191,0.08); padding: 0.2rem 0.7rem; border-radius: 6px; }
     .timeline-company { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; }
     .timeline-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
     .timeline-list li { font-size: 0.88rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.65; }
@@ -121,14 +119,14 @@
     #education { padding: 6rem 0; }
     .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
     .edu-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; transition: all 0.3s; }
-    .edu-card:hover { border-color: rgba(0,229,255,0.2); transform: translateY(-3px); }
+    .edu-card:hover { border-color: rgba(124,154,191,0.2); transform: translateY(-3px); }
     .edu-year { font-size: 0.78rem; color: var(--accent); font-weight: 700; font-family: 'Syne', sans-serif; margin-bottom: 0.5rem; }
     .edu-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
     .edu-school { color: var(--text-muted); font-size: 0.85rem; }
 
     #contact { padding: 6rem 0 8rem; }
     .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
-    .contact-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.05), transparent 60%); }
+    .contact-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(124,154,191,0.05), transparent 60%); }
     .contact-title { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 1rem; position: relative; }
     .contact-desc { color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; position: relative; }
     .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
@@ -147,22 +145,6 @@
       .hero-desc { margin: 0 auto 2rem; }
       .hero-cta { justify-content: center; }
     }
-
-    /* THEME SWITCHER */
-    #tsw { position: fixed; right: 1.2rem; bottom: 1.5rem; z-index: 500; display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
-    #tsw-btn { width: 46px; height: 46px; border-radius: 50%; background: var(--surface2); border: 2px solid var(--accent); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(0,0,0,0.5); transition: transform 0.2s; }
-    #tsw-btn:hover { transform: scale(1.1); }
-    #tsw-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 0.8rem; flex-direction: column; gap: 0.3rem; box-shadow: 0 8px 40px rgba(0,0,0,0.6); display: none; width: 190px; max-height: 70vh; overflow-y: auto; }
-    #tsw-panel.open { display: flex; }
-    #tsw-panel::-webkit-scrollbar { width: 4px; }
-    #tsw-panel::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
-    .tsw-title { font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); margin-bottom: 0.2rem; }
-    .to { display: flex; align-items: center; gap: 0.55rem; padding: 0.4rem 0.55rem; border-radius: 8px; cursor: pointer; border: 1px solid transparent; background: transparent; width: 100%; transition: all 0.15s; }
-    .to:hover { background: var(--surface2); }
-    .to.active { border-color: var(--accent); }
-    .tdots { display: flex; gap: 3px; }
-    .tdot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-    .tname { font-family: 'Syne', sans-serif; font-size: 0.74rem; font-weight: 600; color: var(--text); white-space: nowrap; }
   </style>
 </head>
 <body>
@@ -228,13 +210,7 @@
     <div class="projects-grid">
 
       <div class="project-card fade-in" data-type="engineer">
-        <div class="project-header">
-          <div class="project-emoji">⚡</div>
-          <div class="project-meta">
-            <span class="project-type type-engineer">Data Engineer</span>
-            <span class="project-year">2024</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">⚡</div><div class="project-meta"><span class="project-type type-engineer">Data Engineer</span><span class="project-year">2024</span></div></div>
         <div class="project-title" data-fr="Traitement de logs réseau massifs avec PySpark" data-en="Large-scale Network Log Processing with PySpark">Traitement de logs réseau massifs avec PySpark</div>
         <ul class="project-bullets">
           <li data-fr="Ingérer et traiter des fichiers de logs volumineux avec PySpark et PySpark SQL" data-en="Ingest and process large log files with PySpark and PySpark SQL">Ingérer et traiter des fichiers de logs volumineux avec PySpark et PySpark SQL</li>
@@ -242,19 +218,11 @@
           <li data-fr="Détecter des anomalies et comportements suspects dans les flux de données" data-en="Detect anomalies and suspicious patterns in data streams">Détecter des anomalies et comportements suspects dans les flux de données</li>
           <li data-fr="Stocker les résultats agrégés dans PostgreSQL pour exploitation analytique" data-en="Store aggregated results in PostgreSQL for analytical use">Stocker les résultats agrégés dans PostgreSQL pour exploitation analytique</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">PySpark</span><span class="tag">PySpark SQL</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">Docker</span>
-        </div>
+        <div class="project-stack"><span class="tag">PySpark</span><span class="tag">PySpark SQL</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">Docker</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="scientist">
-        <div class="project-header">
-          <div class="project-emoji">🫀</div>
-          <div class="project-meta">
-            <span class="project-type type-scientist">Data Scientist</span>
-            <span class="project-year">2024</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">🫀</div><div class="project-meta"><span class="project-type type-scientist">Data Scientist</span><span class="project-year">2024</span></div></div>
         <div class="project-title" data-fr="Prédiction de maladies cardiovasculaires" data-en="Cardiovascular Disease Prediction">Prédiction de maladies cardiovasculaires</div>
         <ul class="project-bullets">
           <li data-fr="Analyser et explorer les données cliniques : corrélations, distributions, valeurs aberrantes" data-en="Analyze and explore clinical data: correlations, distributions, outliers">Analyser et explorer les données cliniques : corrélations, distributions, valeurs aberrantes</li>
@@ -262,19 +230,11 @@
           <li data-fr="Comparer et évaluer plusieurs modèles : Random Forest, XGBoost, SVM" data-en="Compare and evaluate multiple models: Random Forest, XGBoost, SVM">Comparer et évaluer plusieurs modèles : Random Forest, XGBoost, SVM</li>
           <li data-fr="Optimiser les hyperparamètres et analyser l'importance des features" data-en="Optimize hyperparameters and analyze feature importance">Optimiser les hyperparamètres et analyser l'importance des features</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
-        </div>
+        <div class="project-stack"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="analyst">
-        <div class="project-header">
-          <div class="project-emoji">🛒</div>
-          <div class="project-meta">
-            <span class="project-type type-analyst">Data Analyst</span>
-            <span class="project-year">2024</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">🛒</div><div class="project-meta"><span class="project-type type-analyst">Data Analyst</span><span class="project-year">2024</span></div></div>
         <div class="project-title" data-fr="Analyse du comportement client e-commerce" data-en="E-commerce Customer Behavior Analysis">Analyse du comportement client e-commerce</div>
         <ul class="project-bullets">
           <li data-fr="Extraire, nettoyer et structurer les données de transactions clients via SQL" data-en="Extract, clean and structure customer transaction data via SQL">Extraire, nettoyer et structurer les données de transactions clients via SQL</li>
@@ -282,19 +242,11 @@
           <li data-fr="Analyser les tendances d'achat et identifier les KPIs clés de performance" data-en="Analyze purchase trends and identify key performance KPIs">Analyser les tendances d'achat et identifier les KPIs clés de performance</li>
           <li data-fr="Construire un dashboard Power BI interactif pour le pilotage commercial" data-en="Build an interactive Power BI dashboard for business monitoring">Construire un dashboard Power BI interactif pour le pilotage commercial</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Pandas</span><span class="tag">Tableau</span>
-        </div>
+        <div class="project-stack"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Pandas</span><span class="tag">Tableau</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="scientist">
-        <div class="project-header">
-          <div class="project-emoji">💰</div>
-          <div class="project-meta">
-            <span class="project-type type-scientist">Data Scientist</span>
-            <span class="project-year">2024–2025</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">💰</div><div class="project-meta"><span class="project-type type-scientist">Data Scientist</span><span class="project-year">2024–2025</span></div></div>
         <div class="project-title" data-fr="Détection de blanchiment d'argent" data-en="Money Laundering Detection">Détection de blanchiment d'argent</div>
         <ul class="project-bullets">
           <li data-fr="Analyser des transactions financières pour identifier des patterns suspects" data-en="Analyze financial transactions to identify suspicious patterns">Analyser des transactions financières pour identifier des patterns suspects</li>
@@ -302,19 +254,11 @@
           <li data-fr="Détecter les anomalies et évaluer les performances des modèles (F1, AUC)" data-en="Detect anomalies and evaluate model performance (F1, AUC)">Détecter les anomalies et évaluer les performances des modèles (F1, AUC)</li>
           <li data-fr="Restituer les résultats via des dashboards Power BI interactifs" data-en="Present results via interactive Power BI dashboards">Restituer les résultats via des dashboards Power BI interactifs</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span><span class="tag">Pandas</span>
-        </div>
+        <div class="project-stack"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span><span class="tag">Pandas</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="scientist">
-        <div class="project-header">
-          <div class="project-emoji">🎭</div>
-          <div class="project-meta">
-            <span class="project-type type-scientist">Data Scientist</span>
-            <span class="project-year">2024–2025</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">🎭</div><div class="project-meta"><span class="project-type type-scientist">Data Scientist</span><span class="project-year">2024–2025</span></div></div>
         <div class="project-title" data-fr="Génération d'images synthétiques de visages (GAN)" data-en="Synthetic Face Image Generation (GAN)">Génération d'images synthétiques de visages (GAN)</div>
         <ul class="project-bullets">
           <li data-fr="Concevoir et comparer trois architectures : GAN simple, DCGAN, StyleGAN2-ADA" data-en="Design and compare three architectures: vanilla GAN, DCGAN, StyleGAN2-ADA">Concevoir et comparer trois architectures : GAN simple, DCGAN, StyleGAN2-ADA</li>
@@ -322,19 +266,11 @@
           <li data-fr="Évaluer et comparer qualitativement les résultats de génération" data-en="Qualitatively evaluate and compare generation results">Évaluer et comparer qualitativement les résultats de génération</li>
           <li data-fr="Analyser les limitations de chaque architecture et proposer des améliorations" data-en="Analyze limitations of each architecture and propose improvements">Analyser les limitations de chaque architecture et proposer des améliorations</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">PyTorch</span><span class="tag">GAN</span><span class="tag">DCGAN</span><span class="tag">StyleGAN2-ADA</span><span class="tag">Python</span>
-        </div>
+        <div class="project-stack"><span class="tag">PyTorch</span><span class="tag">GAN</span><span class="tag">DCGAN</span><span class="tag">StyleGAN2-ADA</span><span class="tag">Python</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="engineer">
-        <div class="project-header">
-          <div class="project-emoji">📋</div>
-          <div class="project-meta">
-            <span class="project-type type-engineer">Data Engineer</span>
-            <span class="project-year">2023</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">📋</div><div class="project-meta"><span class="project-type type-engineer">Data Engineer</span><span class="project-year">2023</span></div></div>
         <div class="project-title" data-fr="Système automatisé de présence (Desktop App)" data-en="Automated Attendance System (Desktop App)">Système automatisé de présence (Desktop App)</div>
         <ul class="project-bullets">
           <li data-fr="Développer une application desktop Python/Tkinter pour la gestion automatisée des présences" data-en="Develop a Python/Tkinter desktop app for automated attendance management">Développer une application desktop Python/Tkinter pour la gestion automatisée des présences</li>
@@ -342,19 +278,11 @@
           <li data-fr="Stocker et gérer les données dans une base Oracle SQL avec des procédures PL/SQL" data-en="Store and manage data in an Oracle SQL database with PL/SQL procedures">Stocker et gérer les données dans une base Oracle SQL avec des procédures PL/SQL</li>
           <li data-fr="Générer automatiquement des rapports de présence et des tableaux de bord" data-en="Automatically generate attendance reports and dashboards">Générer automatiquement des rapports de présence et des tableaux de bord</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Oracle SQL</span><span class="tag">PL/SQL</span><span class="tag">OpenCV</span>
-        </div>
+        <div class="project-stack"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Oracle SQL</span><span class="tag">PL/SQL</span><span class="tag">OpenCV</span></div>
       </div>
 
       <div class="project-card fade-in" data-type="scientist">
-        <div class="project-header">
-          <div class="project-emoji">👄</div>
-          <div class="project-meta">
-            <span class="project-type type-scientist">Data Scientist</span>
-            <span class="project-year">2024</span>
-          </div>
-        </div>
+        <div class="project-header"><div class="project-emoji">👄</div><div class="project-meta"><span class="project-type type-scientist">Data Scientist</span><span class="project-year">2024</span></div></div>
         <div class="project-title" data-fr="Lecture labiale en arabe (Deep Learning + NLP)" data-en="Arabic Lip Reading (Deep Learning + NLP)">Lecture labiale en arabe (Deep Learning + NLP)</div>
         <ul class="project-bullets">
           <li data-fr="Concevoir un système de reconnaissance visuelle de la parole à partir de vidéos arabes" data-en="Design a visual speech recognition system from Arabic videos">Concevoir un système de reconnaissance visuelle de la parole à partir de vidéos arabes</li>
@@ -362,9 +290,7 @@
           <li data-fr="Entraîner un modèle CNN+LSTM pour interpréter les mouvements des lèvres" data-en="Train a CNN+LSTM model to interpret lip movements">Entraîner un modèle CNN+LSTM pour interpréter les mouvements des lèvres</li>
           <li data-fr="Reconstruire et valider les mots arabes à partir des séquences visuelles" data-en="Reconstruct and validate Arabic words from visual sequences">Reconstruire et valider les mots arabes à partir des séquences visuelles</li>
         </ul>
-        <div class="project-stack">
-          <span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">MediaPipe</span><span class="tag">Dlib</span><span class="tag">Python</span>
-        </div>
+        <div class="project-stack"><span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">MediaPipe</span><span class="tag">Dlib</span><span class="tag">Python</span></div>
       </div>
 
     </div>
@@ -441,7 +367,7 @@
       <div class="edu-card fade-in"><div class="edu-year">2025 – Présent</div><div class="edu-degree" data-fr="Master 1 – Ingénierie des Systèmes Complexes" data-en="Master 1 – Complex Systems Engineering">Master 1 – Ingénierie des Systèmes Complexes</div><div class="edu-school">EILCO, Calais 🇫🇷</div></div>
       <div class="edu-card fade-in"><div class="edu-year">2024 – 2025</div><div class="edu-degree" data-fr="Master 1 d'Excellence – Data & IA" data-en="Master 1 of Excellence – Data & AI">Master 1 d'Excellence – Data & IA</div><div class="edu-school">FS Meknès 🇲🇦</div></div>
       <div class="edu-card fade-in"><div class="edu-year">2023 – 2024</div><div class="edu-degree" data-fr="Licence d'Excellence – Data & IA" data-en="Bachelor of Excellence – Data & AI">Licence d'Excellence – Data & IA</div><div class="edu-school">FS Meknès 🇲🇦</div></div>
-      <div class="edu-card fade-in"><div class="edu-year">2021 – 2023</div><div class="edu-degree" data-fr="DUT – Génie Informatique " data-en="DUT – Computer Engineering ">DUT – Génie Informatique </div><div class="edu-school">EST Meknès 🇲🇦</div></div>
+      <div class="edu-card fade-in"><div class="edu-year">2021 – 2023</div><div class="edu-degree" data-fr="DUT – Génie Informatique" data-en="DUT – Computer Engineering">DUT – Génie Informatique</div><div class="edu-school">EST Meknès 🇲🇦</div></div>
     </div>
   </div>
 </section>
@@ -465,96 +391,7 @@
   <span data-fr="© 2026 Hamza El Jmili — Tous droits réservés" data-en="© 2026 Hamza El Jmili — All rights reserved">© 2026 Hamza El Jmili — Tous droits réservés</span>
 </footer>
 
-<!-- THEME SWITCHER -->
-<div id="tsw">
-  <div id="tsw-panel">
-    <div class="tsw-title">🎨 20 Thèmes</div>
-
-    <button class="to active" onclick="AT(this,'#0a0a0f','#13131a','#1c1c27','#00e5ff','#7c4dff','#ff6b6b','#e8e8f0','#7a7a9a','rgba(255,255,255,0.07)')">
-      <div class="tdots"><div class="tdot" style="background:#00e5ff"></div><div class="tdot" style="background:#7c4dff"></div><div class="tdot" style="background:#ff6b6b"></div></div><span class="tname">🔵 Ocean Deep</span></button>
-
-    <button class="to" onclick="AT(this,'#0d1117','#161b22','#21262d','#4f9cf9','#6e7bff','#a78bfa','#e6edf3','#7d8590','rgba(255,255,255,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#4f9cf9"></div><div class="tdot" style="background:#6e7bff"></div><div class="tdot" style="background:#a78bfa"></div></div><span class="tname">🌊 Deep Navy</span></button>
-
-    <button class="to" onclick="AT(this,'#0f1612','#152019','#1c2d22','#4ade80','#34d399','#6ee7b7','#e0f2e9','#5a8a6a','rgba(74,222,128,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#4ade80"></div><div class="tdot" style="background:#34d399"></div><div class="tdot" style="background:#6ee7b7"></div></div><span class="tname">🌿 Forest Slate</span></button>
-
-    <button class="to" onclick="AT(this,'#111113','#1c1a16','#272420','#c9a96e','#b8936a','#e0c899','#f0ebe0','#8a7a5a','rgba(201,169,110,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#c9a96e"></div><div class="tdot" style="background:#b8936a"></div><div class="tdot" style="background:#e0c899"></div></div><span class="tname">🪨 Warm Slate</span></button>
-
-    <button class="to" onclick="AT(this,'#0f0f14','#17171f','#22222e','#818cf8','#a5b4fc','#c7d2fe','#e0e7ff','#6b7280','rgba(129,140,248,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#818cf8"></div><div class="tdot" style="background:#a5b4fc"></div><div class="tdot" style="background:#c7d2fe"></div></div><span class="tname">🔮 Indigo Mist</span></button>
-
-    <button class="to" onclick="AT(this,'#0d1018','#131824','#1a2130','#38bdf8','#7dd3fc','#bae6fd','#e0f2fe','#64748b','rgba(56,189,248,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#38bdf8"></div><div class="tdot" style="background:#7dd3fc"></div><div class="tdot" style="background:#bae6fd"></div></div><span class="tname">🧊 Ice Blue</span></button>
-
-    <button class="to" onclick="AT(this,'#0c0f0c','#141814','#1c241c','#86efac','#6ee7b7','#bbf7d0','#dcfce7','#4a7a5a','rgba(134,239,172,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#86efac"></div><div class="tdot" style="background:#6ee7b7"></div><div class="tdot" style="background:#bbf7d0"></div></div><span class="tname">🍃 Sage Night</span></button>
-
-    <button class="to" onclick="AT(this,'#100d12','#181520','#22192e','#d8b4fe','#c084fc','#e9d5ff','#faf5ff','#9a7aaa','rgba(216,180,254,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#d8b4fe"></div><div class="tdot" style="background:#c084fc"></div><div class="tdot" style="background:#e9d5ff"></div></div><span class="tname">🌸 Lavender</span></button>
-
-    <button class="to" onclick="AT(this,'#0f1215','#171e24','#1f2c35','#5eead4','#2dd4bf','#99f6e4','#e0fdf4','#4a8a80','rgba(94,234,212,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#5eead4"></div><div class="tdot" style="background:#2dd4bf"></div><div class="tdot" style="background:#99f6e4"></div></div><span class="tname">🌊 Teal Depths</span></button>
-
-    <button class="to" onclick="AT(this,'#0f0d0a','#1a1612','#26201a','#fb923c','#f97316','#fed7aa','#fff7ed','#8a6a4a','rgba(251,146,60,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#fb923c"></div><div class="tdot" style="background:#f97316"></div><div class="tdot" style="background:#fed7aa"></div></div><span class="tname">🍂 Autumn Ember</span></button>
-
-    <button class="to" onclick="AT(this,'#f8f9fb','#ffffff','#eef1f5','#475569','#64748b','#94a3b8','#1e293b','#64748b','rgba(0,0,0,0.07)')">
-      <div class="tdots"><div class="tdot" style="background:#475569"></div><div class="tdot" style="background:#64748b"></div><div class="tdot" style="background:#94a3b8"></div></div><span class="tname">🌫️ Fog Light</span></button>
-
-    <button class="to" onclick="AT(this,'#f0f4f8','#ffffff','#e2eaf3','#3b82f6','#6366f1','#0ea5e9','#1e3a5f','#64748b','rgba(0,0,0,0.07)')">
-      <div class="tdots"><div class="tdot" style="background:#3b82f6"></div><div class="tdot" style="background:#6366f1"></div><div class="tdot" style="background:#0ea5e9"></div></div><span class="tname">🏔️ Arctic Blue</span></button>
-
-    <button class="to" onclick="AT(this,'#f9f6f2','#ffffff','#f0ebe4','#92400e','#b45309','#d97706','#1c1410','#6b5a4a','rgba(0,0,0,0.06)')">
-      <div class="tdots"><div class="tdot" style="background:#92400e"></div><div class="tdot" style="background:#b45309"></div><div class="tdot" style="background:#d97706"></div></div><span class="tname">☕ Latte Light</span></button>
-
-    <button class="to" onclick="AT(this,'#f5f7f5','#ffffff','#eaf0ea','#166534','#15803d','#4ade80','#14532d','#4a7a5a','rgba(0,0,0,0.06)')">
-      <div class="tdots"><div class="tdot" style="background:#166534"></div><div class="tdot" style="background:#15803d"></div><div class="tdot" style="background:#4ade80"></div></div><span class="tname">🌱 Mint Fresh</span></button>
-
-    <button class="to" onclick="AT(this,'#0e0e10','#18181c','#222228','#94a3b8','#cbd5e1','#e2e8f0','#f1f5f9','#64748b','rgba(255,255,255,0.06)')">
-      <div class="tdots"><div class="tdot" style="background:#94a3b8"></div><div class="tdot" style="background:#cbd5e1"></div><div class="tdot" style="background:#e2e8f0"></div></div><span class="tname">⬜ Monochrome</span></button>
-
-    <button class="to" onclick="AT(this,'#0c1118','#131c27','#1a2636','#67e8f9','#22d3ee','#a5f3fc','#ecfeff','#4a8a9a','rgba(103,232,249,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#67e8f9"></div><div class="tdot" style="background:#22d3ee"></div><div class="tdot" style="background:#a5f3fc"></div></div><span class="tname">🌌 Cyan Cosmos</span></button>
-
-    <button class="to" onclick="AT(this,'#100a0f','#1c1018','#281622','#f9a8d4','#f472b6','#fbcfe8','#fdf2f8','#9a6a8a','rgba(249,168,212,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#f9a8d4"></div><div class="tdot" style="background:#f472b6"></div><div class="tdot" style="background:#fbcfe8"></div></div><span class="tname">🌺 Blush Rose</span></button>
-
-    <button class="to" onclick="AT(this,'#0a0c10','#12161e','#1a1f2c','#7c9abf','#a0b4cc','#c5d5e5','#e8f0f8','#5a7a9a','rgba(124,154,191,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#7c9abf"></div><div class="tdot" style="background:#a0b4cc"></div><div class="tdot" style="background:#c5d5e5"></div></div><span class="tname">🌧️ Storm Blue</span></button>
-
-    <button class="to" onclick="AT(this,'#0d1008','#151a0e','#1d2416','#a3e635','#84cc16','#d9f99d','#f7fee7','#5a7a2a','rgba(163,230,53,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#a3e635"></div><div class="tdot" style="background:#84cc16"></div><div class="tdot" style="background:#d9f99d"></div></div><span class="tname">⚡ Lime Matrix</span></button>
-
-    <button class="to" onclick="AT(this,'#0f0e0c','#1a1916','#252320','#d4af70','#c49a45','#e8d5a0','#faf5e8','#8a7a5a','rgba(212,175,112,0.08)')">
-      <div class="tdots"><div class="tdot" style="background:#d4af70"></div><div class="tdot" style="background:#c49a45"></div><div class="tdot" style="background:#e8d5a0"></div></div><span class="tname">✨ Gold Dusk</span></button>
-
-  </div>
-  <button id="tsw-btn" onclick="document.getElementById('tsw-panel').classList.toggle('open')">🎨</button>
-</div>
-
 <script>
-  function AT(btn, bg, sf, sf2, ac, ac2, ac3, tx, txm, bd) {
-    const r = document.documentElement;
-    r.style.setProperty('--bg', bg);
-    r.style.setProperty('--surface', sf);
-    r.style.setProperty('--surface2', sf2);
-    r.style.setProperty('--accent', ac);
-    r.style.setProperty('--accent2', ac2);
-    r.style.setProperty('--accent3', ac3);
-    r.style.setProperty('--text', tx);
-    r.style.setProperty('--text-muted', txm);
-    r.style.setProperty('--border', bd || 'rgba(255,255,255,0.07)');
-    document.querySelectorAll('.to').forEach(o => o.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tsw-panel').classList.remove('open');
-  }
-  document.addEventListener('click', function(e) {
-    if (!document.getElementById('tsw').contains(e.target))
-      document.getElementById('tsw-panel').classList.remove('open');
-  });
-
   function setLang(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector('.lang-btn:' + (lang === 'fr' ? 'first' : 'last') + '-child').classList.add('active');
